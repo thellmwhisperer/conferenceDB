@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pycache/
+
+# Pytest
+.pytest_cache/
+
+# Generated data and artifacts (rebuild with: .venv/bin/python ingest.py)
+data/
+
+# OS
+.DS_Store
