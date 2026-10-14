@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sqlite3
 import sys
@@ -16,7 +17,7 @@ SRC_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = SRC_DIR.parent
 DATA_DIR = PROJECT_DIR / "data"
 DEFAULT_DB_PATH = DATA_DIR / "umprompted.db"
-DEFAULT_VIDEO_DIR = Path("/Volumes/CrucialX9/tmp/mellador")
+DEFAULT_VIDEO_DIR = Path(os.environ.get("CONFERENCE_VIDEO_DIR", DATA_DIR / "videos"))
 DEFAULT_OUTPUT_DIR = DEFAULT_VIDEO_DIR / "output"
 DEFAULT_FILEMAP_PATH = DEFAULT_VIDEO_DIR / "filemap.txt"
 DEFAULT_SCHEMA_PATH = SRC_DIR / "schema.sql"
